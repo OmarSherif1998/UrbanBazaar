@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Stars from './Stars';
-import Category from './category';
+import Category from './Category';
 import Price from './Price';
 
 function Sidebar({
