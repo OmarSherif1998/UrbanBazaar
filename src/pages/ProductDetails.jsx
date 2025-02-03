@@ -25,6 +25,7 @@ function ProductDetails() {
 	const [selectedColor, setSelectedColor] = useState('Black');
 	const [quantity, setQuantity] = useState(1);
 	const [selectedSize, setSelectedSize] = useState('S');
+	const [successMessage, setSuccessMessage] = useState(''); // State for success message
 	const dispatch = useDispatch();
 
 	const increaseQuantity = () => setQuantity((prev) => prev + 1);
@@ -68,6 +69,14 @@ function ProductDetails() {
 
 		localStorage.setItem(cartKey, JSON.stringify(cart));
 		dispatch(addToCart(order));
+
+		// Show success message
+		setSuccessMessage('The item has been added to the cart successfully.');
+
+		// Hide the message after 3 seconds
+		setTimeout(() => {
+			setSuccessMessage('');
+		}, 3000);
 	};
 	if (!product)
 		return <p className='text-center text-lg'>Product not found.</p>;
@@ -79,6 +88,14 @@ function ProductDetails() {
 			>
 				Back to Products
 			</button>
+
+			{/* Success message */}
+			{successMessage && (
+				<div className='mb-4 p-4 text-white bg-green-500 rounded'>
+					{successMessage}
+				</div>
+			)}
+
 			<div className='flex flex-col md:flex-row border border-gray-200 bg-white  rounded-lg p-6 w-full'>
 				<Img title={product.title} image={product.image} />
 				<div className='w-full md:w-1/2 flex flex-col gap-4 h-screen p-5 '>
