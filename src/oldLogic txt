@@ -1,0 +1,95 @@
+/** @format */
+
+//That was the logic for the old login where I created the users by signing them up from the signning page but then I realized that wasn't what the task stated.
+// const users = JSON.parse(localStorage.getItem('users')) || [];
+
+// const currentUser = users.find(
+// 	(user) => user.username === formData.username,
+// );
+// if (!currentUser) {
+// 	setError('The email or password is incorrect');
+
+// 	return;
+// }
+
+// const hashedPassword = bcrypt.hashSync(formData.password, 10);
+// const isMatch = bcrypt.compareSync(currentUser.password, hashedPassword);
+// if (!isMatch) {
+// 	setError('The email or password is incorrect');
+// 	return;
+// }
+
+// localStorage.setItem('authToken', true);
+// localStorage.setItem('loggedInUser', JSON.stringify(currentUser));
+// dispatch(login({ user: currentUser, authToken: true }));
+
+//navigate('/home');
+
+// <div className='p-5 border border-gray-100 w-[50%] h-[80vh] rounded-lg shadow-sm bg-white'>
+// 	<h2 className='text-xl font-semibold mb-2'>Delivery Options</h2>
+
+// 	<div
+// 		className={`flex items-center gap-4 p-4 mb-4 border rounded-lg cursor-pointer transition-all duration-200 ${
+// 			deliveryOption === 'Standard'
+// 				? 'border-blue-500 bg-blue-50'
+// 				: 'border-gray-300 hover:bg-gray-50'
+// 		}`}
+// 		onClick={() => handleDeliveryChange('Standard')}
+// 	>
+// 		<AirportShuttleOutlinedIcon
+// 			className={`text-2xl ${
+// 				deliveryOption === 'Standard' ? 'text-blue-500' : 'text-gray-500'
+// 			}`}
+// 		/>
+// 		<div>
+// 			<h3 className='font-medium'>Standard Delivery</h3>
+// 			<p className='text-sm text-gray-600'>2-3 business days</p>
+// 		</div>
+// 		{deliveryOption === 'Standard' && (
+// 			<CheckOutlinedIcon className='text-blue-500 ml-auto' />
+// 		)}
+// 	</div>
+
+// 	{/* Urban PLUS Delivery Option */}
+// 	<div
+// 		className={`flex items-center gap-4 p-4 mb-4 border rounded-lg cursor-pointer transition-all duration-200 ${
+// 			deliveryOption === 'urbanPlus'
+// 				? 'border-blue-500 bg-blue-50'
+// 				: 'border-gray-300 hover:bg-gray-50'
+// 		}`}
+// 		onClick={() => handleDeliveryChange('urbanPlus')}
+// 	>
+// 		<ElectricMopedOutlinedIcon
+// 			className={`text-2xl ${
+// 				deliveryOption === 'urbanPlus' ? 'text-green-500' : 'text-gray-500'
+// 			}`}
+// 		/>
+// 		<div>
+// 			<h3 className='font-medium'>Urban PLUS Delivery</h3>
+// 			<p className='text-sm text-gray-600'>
+// 				Delivered within 24 hours (+$10)
+// 			</p>
+// 		</div>
+// 		{deliveryOption === 'urbanPlus' && (
+// 			<CheckOutlinedIcon className='text-green-500 ml-auto' />
+// 		)}
+// 	</div>
+
+// 	{/* Additional Information */}
+// 	<div className='mt-6 space-y-3'>
+// 		<div className='flex items-center gap-2'>
+// 			<CheckOutlinedIcon className='text-green-500' />
+// 			<span className='text-sm text-gray-600'>Shipped by Urban Bazaar</span>
+// 		</div>
+// 		<div className='flex items-center gap-2'>
+// 			<CheckOutlinedIcon className='text-green-500' />
+// 			<span className='text-sm text-gray-600'>30 Days return policy</span>
+// 		</div>
+// 		<div className='flex items-center gap-2'>
+// 			<CheckOutlinedIcon className='text-green-500' />
+// 			<span className='text-sm text-gray-600'>
+// 				Free return if delivered by Urban PLUS
+// 			</span>
+// 		</div>
+// 	</div>
+// </div>
